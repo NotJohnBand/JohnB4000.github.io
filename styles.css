@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: 2px solid red;
 }
 
 img {
@@ -41,9 +42,7 @@ nav {
     float: right;
 }
 
-nav ul li {
-    list-style-type: none;
-}
+nav ul li {list-style-type: none;}
 
 nav ul li a {
     float: left;
@@ -60,9 +59,7 @@ nav ul li a {
 }
 
 
-nav ul li a:hover {
-    padding: 3% 0;
-}
+nav ul li a:hover {padding: 3% 0;}
 
 #bottomNavSect {
     background-color: var(--accent-color);
@@ -78,47 +75,72 @@ main, footer {
     clear: both;
 }
 
-.img-left{
+.img-left, .img-right{
     display: flex;
     align-items: center;
+    margin: 40px 0;
+}
+
+.img-left img, .img-right img {
+    width: 30%;
+    border-top: 5px solid var(--accent-color);
+    border-bottom: 5px solid var(--accent-color);
 }
 
 .img-left img{
     float: left;
-    width: 30%;
-    border-top: 5px solid var(--accent-color);
     border-right: 5px solid var(--accent-color);
-    border-bottom: 5px solid var(--accent-color);
     border-radius: 0 15px 15px 0;
 }
 
-.img-left div {
+.img-right img{
+    float: right;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 15px 0 0 15px;
+}
+
+.img-left div, .img-right div {
     display: flex;
     flex-direction: column;
     width: 70%;
     transform: translate(0, -10%);
 }
 
-.img-left h1 {
-    margin: 0 0 20px 40px;
+.img-left h1, .img-left h1 {
     text-decoration: underline;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.img-left p {
-    float: left;
+.img-left h1 {
+    margin: 0 0 20px 40px;
+}
+
+.img-right h1 {
+    text-align: right;
+    margin: 0 40px 20px 0;
+}
+
+.img-left p, .img-right p {
     width: 105%;
     padding: 40px 30px;
     border-top: 5px solid var(--accent-color);
-    border-left: 5px solid var(--accent-color);
     border-bottom: 5px solid var(--accent-color);
-    border-radius: 15px 0 0 15px;
     background-color: lightgrey;
     text-align: justify;
-    text-justify: inter-word;
+}
+
+.img-left p {
+    float: left;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 15px 0 0 15px;
     transform: translate(-10%, 0);
-    /* transform: translate(-13.86%, 0); */
+}
+
+.img-right p {
+    float: right;
+    border-right: 5px solid var(--accent-color);
+    border-radius: 0 15px 15px 0;
 }
 
 footer {
